@@ -57,7 +57,28 @@ android {
             signingConfig signingConfigs.debug
         }
     }
-    flavor
+    flavorDimensions "flavors"
+    productFlavors {
+        dev {
+            flavorDimensions "flavors"
+            applicationIdSuffix ".dev"
+            versionNameSuffix "-dev"
+            manifestPlaceholders = [appName: "template"]
+            resValue "string", "app_name", "template"
+        }
+        stg{
+            dimension "flavors"
+            applicationIdSuffix ".stg"
+            versionNameSuffix "-stg"
+            resValue "string", "app_name" , "template"
+        }
+        prod {
+            flavorDimensions "flavors"
+            applicationIdSuffix "com.example.template"
+            manifestPlaceholders = [appName: "template"]
+            resValue "string", "app_name", "template"
+        }
+    }
 }
 
 flutter {
