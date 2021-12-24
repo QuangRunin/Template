@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:template/core/env/env.dart';
+import 'package:template/localization_service.dart';
 import 'package:template/routes/app_pages.dart';
 import 'package:template/routes/app_routes.dart';
 
@@ -43,6 +44,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: GetMaterialApp(
         initialRoute: AppRoutes.SPLASH,
+        locale: LocalizationService.locale,
+        fallbackLocale: LocalizationService.fallbackLocale,
+        translations: LocalizationService(),
         getPages: AppPages.pages,
         debugShowCheckedModeBanner: false,
         themeMode: ThemeMode.system,

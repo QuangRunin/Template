@@ -11,7 +11,7 @@ class SplashController extends GetxController with SingleGetTickerProviderMixin{
   }
   startTime() {
     return Timer(const Duration(seconds: 2), () async {
-      // Get.offNamed(AppRoutes.DASHBOARD);
+      Get.offNamed(AppRoutes.DASHBOARD);
     });
   }
 }
