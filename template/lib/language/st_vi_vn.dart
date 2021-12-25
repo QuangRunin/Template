@@ -1,5 +1,6 @@
 const Map<String, String> vi = {
   'home' : 'Trang Chủ',
-  'hello': 'Xin chào',
+  'vn' : 'Việt Nam',
+  'en' : 'Anh',
   'multipleLanguage' : 'Đa ngôn ngữ'
 };

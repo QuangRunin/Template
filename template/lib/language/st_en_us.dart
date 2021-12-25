@@ -1,5 +1,6 @@
 const Map<String, String> en = {
   'home' : 'Home',
-  'hello': 'Hello',
+  'vn' : 'Việt Nam',
+  'en' : 'English',
   'multipleLanguage' : 'Multiple language'
 };
