@@ -18,14 +18,14 @@ const defaultColor = Color(0xFF000000);
 const whiteColor = Color(0xFFFFFFFF);
 const appPadding = 16.0;
 const textFieldPaddingHorizontal = 25.0;
-
+const avatarDefault = 'https://photo-cms-kienthuc.zadn.vn/zoom/800/uploaded/nguyenanhson/2021_06_03/4/dep-tua-tinh-dau-hot-girl-nga-lam-netizen-tan-chay-la-ai.jpeg';
 //           AppBar Style           //
 var appbarStyle = GoogleFonts.getFont(
   font,
-  textStyle: const TextStyle(
+  textStyle: const  TextStyle(
     color: whiteColor,
-    fontSize: 16,
-    fontWeight: w500,
+    fontSize: 18,
+    fontWeight: w700,
   ),
 );
 //           DefaultColor Text           //
@@ -53,7 +53,14 @@ var size14W500Default = GoogleFonts.getFont(
     fontWeight: w500,
   ),
 );
-
+var size16W700Default = GoogleFonts.getFont(
+  font,
+  textStyle: const TextStyle(
+    color: defaultColor,
+    fontSize: 16,
+    fontWeight: w700,
+  ),
+);
 //           WhiteColor Text           //
 var size11W500White = GoogleFonts.getFont(
   font,

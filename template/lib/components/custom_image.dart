@@ -6,22 +6,25 @@ class CustomImage extends StatelessWidget {
     this.imageRatio = 1.618,
     this.placeholder,
     this.image,
+    this.height,
+    this.fit,
     required this.width,
   }) : super(key: key);
   final String? image;
   final double width;
+  final double? height;
   final double imageRatio;
   final String? placeholder;
+  final BoxFit? fit;
 
   @override
   Widget build(BuildContext context) {
-    double? height = imageRatio == null ? width : imageRatio * width;
     return FadeInImage.assetNetwork(
       image: image!,
       placeholder: placeholder ?? 'assets/images/placeholder.jpg',
       width: width,
-      height: height,
-      fit: BoxFit.cover,
+      height: height ?? width,
+      fit: fit ?? BoxFit.contain,
       fadeOutDuration: const Duration(milliseconds: 100),
       fadeInDuration: const Duration(milliseconds: 200),
     );

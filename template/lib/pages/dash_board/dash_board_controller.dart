@@ -13,6 +13,7 @@ class DashBoardController extends GetxController with GetTickerProviderStateMixi
   int bottomNvgLastIndex = 0;
   List<MCountry> languageList =   List<MCountry>.from(language.map((x) => MCountry.fromJson(x)));
   String? selectedLang;
+  var leftMenu = ['Action','Action1','Action2','Actio3','Action4', logOut];
   List<Widget>? dashBoardWidgets = <Widget>[
     const HomePage(),
     const HomePage(),
@@ -25,7 +26,6 @@ class DashBoardController extends GetxController with GetTickerProviderStateMixi
   late Animation<double> scaleAnimation;
   late Animation<double> menuScaleAnimation;
   late Animation<Offset> slideAnimation;
-
   @override
   Future<void> onInit() async{
     controller = AnimationController(vsync: this, duration: duration);
