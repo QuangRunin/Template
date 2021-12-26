@@ -6,14 +6,15 @@ import 'package:template/data/country.dart';
 import 'package:template/language/const.dart';
 import 'package:template/localization_service.dart';
 import 'package:template/model/m_country.dart';
+import 'package:template/model/m_left_menu.dart';
 import 'package:template/pages/home/home_page.dart';
 
 class DashBoardController extends GetxController with GetTickerProviderStateMixin{
   var currentIndex = 0.obs;
   int bottomNvgLastIndex = 0;
   List<MCountry> languageList =   List<MCountry>.from(language.map((x) => MCountry.fromJson(x)));
+  List<MLeftMenu> leftMenu =   List<MLeftMenu>.from(menu.map((x) => MLeftMenu.fromJson(x)));
   String? selectedLang;
-  var leftMenu = ['Action','Action1','Action2','Actio3','Action4', logOut];
   List<Widget>? dashBoardWidgets = <Widget>[
     const HomePage(),
     const HomePage(),
@@ -53,6 +54,26 @@ class DashBoardController extends GetxController with GetTickerProviderStateMixi
   }
   void changeIndex(value){
     currentIndex.value = value;
+    update();
+  }
+  void actionMenu({index, screen}) {
+    switch (index) {
+      case 0:
+        break;
+      case 1:
+        break;
+      case 2:
+        break;
+      case 3:
+        break;
+      case 4:
+        Get.toNamed(screen);
+        break;
+      case 5:
+        break;
+    }
+    controller.reverse();
+    isCollapsed = !isCollapsed;
     update();
   }
   void updateLang({value}) {

@@ -9,9 +9,6 @@ class SplashPage extends StatelessWidget {
   Widget build(BuildContext context) {
     var controller = Get.put(SplashController());
     return Scaffold(
-      appBar: AppBar(
-        title: Text(hello.tr),
-      ),
       body: Container(),
     );
   }

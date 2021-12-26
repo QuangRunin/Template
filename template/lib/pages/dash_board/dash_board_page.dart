@@ -40,7 +40,7 @@ class _DashboardPageState extends State<DashboardPage> {
                 duration: controller.duration,
                 top: 0,
                 bottom: 0,
-                curve: Curves.elasticOut,
+                curve: Curves.fastLinearToSlowEaseIn,
                 left: controller.isCollapsed ? 0 : 0.6 * screenWidth,
                 right: controller.isCollapsed ? 0 : -0.2 * screenWidth,
                 child: ScaleTransition(
@@ -116,24 +116,9 @@ class _DashboardPageState extends State<DashboardPage> {
                         ),
                       ),
                       const SizedBox(height: 10.0),
-                      Text("Nguyen Hong Quang",style: size16W700Default),
+                      Text("Name",style: size16W700Default),
                     ],
                   ),
-              ),
-              Container(
-                alignment: Alignment.topLeft,
-                margin: const EdgeInsets.only(left: 16.0,top: 16.0),
-                child: DropdownButton<String>(
-                  icon: const Icon(Icons.arrow_drop_down),
-                  value: controller.selectedLang,
-                  items: _buildDropdownMenuItems(),
-                  elevation: 1,
-                  borderRadius: const BorderRadius.all(Radius.circular(10.0)),
-                  focusColor: Colors.red,
-                  onChanged: (String? value) {
-                    controller.updateLang(value: value);
-                  },
-                ),
               ),
               Expanded(
                 child: ListView.builder(
@@ -141,8 +126,9 @@ class _DashboardPageState extends State<DashboardPage> {
                   shrinkWrap: true,
                   padding: const EdgeInsets.only(top: 16),
                   itemBuilder: (context, index) {
+                    var item = controller.leftMenu[index];
                     return InkWell(
-                      onTap: () => {print('aaa')},
+                      onTap: () => controller.actionMenu(index: index, screen: item.screen),
                       child: Container(
                         alignment: Alignment.centerLeft,
                         margin: const EdgeInsets.only(bottom: 5),
@@ -159,9 +145,15 @@ class _DashboardPageState extends State<DashboardPage> {
                             ),
                           ],
                         ),
-                        child: Text(
-                          controller.leftMenu[index].tr,
-                          style: size16W700Default,
+                        child: Row(
+                          children: [
+                            Icon(item.icon),
+                            const SizedBox(width: 10.0),
+                            Text(
+                              item.title.tr,
+                              style: size14W500Default,
+                            ),
+                          ],
                         ),
                       ),
                     );

@@ -20,10 +20,10 @@ class CustomAppBar extends AppBar {
   }) : super(key: key,
     title: Text(title ?? '', style: appbarStyle),
     automaticallyImplyLeading: automaticallyImplyLeading,
-    backgroundColor:  appBarColor ?? Colors.deepOrange,
+    backgroundColor:  appBarColor ?? appbarColor,
     leading: showBackIcon ?  CustomIcon(
       icon: leadingIcon ?? Icons.arrow_back_rounded,
-      iconColor: Colors.white,
+      iconColor: defaultColor,
       onPressed: onLeadingAction ?? () => Get.back(),
     ): null,
     centerTitle: centerTitle,

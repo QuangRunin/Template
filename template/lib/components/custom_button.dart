@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:template/common/styles.dart';
 
 class CustomButton extends StatelessWidget {
   final String title;
@@ -14,7 +15,7 @@ class CustomButton extends StatelessWidget {
       required this.title,
       required this.onPressed,
       this.backgroundColor,
-      this.borderRadius = 10.0,
+      this.borderRadius = 30.0,
       this.width,
       this.height,
       this.fontSize = 14.0, this.titleColor})
@@ -23,18 +24,21 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: width ?? MediaQuery.of(context).size.width - 32 ,
-      height: height ?? 40.0,
+      height: height ?? 45.0,
       child: OutlinedButton(
         style: OutlinedButton.styleFrom(
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(borderRadius),
-            ),
-            side: const BorderSide(width: 1, color: Colors.transparent),
-            backgroundColor: backgroundColor ?? Colors.red,
-            padding: const EdgeInsets.only(top: 5)
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(borderRadius),
+          ),
+          side: const BorderSide(width: 1, color: Colors.transparent),
+          backgroundColor: backgroundColor ?? Colors.red,
+          padding: const EdgeInsets.only(top: 5),
+          elevation: 3,
+          animationDuration: const Duration(seconds: 1),
+          shadowColor: Colors.lightBlue,
         ),
         onPressed: () => onPressed(),
-        child: Text(title),
+        child: Text(title, style: buttonStyle),
       ),
     );
   }

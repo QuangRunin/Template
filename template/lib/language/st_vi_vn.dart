@@ -1,7 +1,17 @@
 const Map<String, String> vi = {
   'home' : 'Trang Chủ',
-  'vn' : 'Việt Nam',
-  'en' : 'Anh',
+  'vn' : 'Tiếng việt',
+  'en' : 'Tiếng anh',
+  'lang' : 'Ngôn ngữ',
   'logOut': 'Đăng Xuất',
-  'multipleLanguage' : 'Đa ngôn ngữ'
+  'signIn': 'Đăng nhập',
+  'signUp': 'Đăng ký',
+  'email': 'Email',
+  'password': 'Mật khẩu',
+  'confirm_password': 'Nhập lại mật khẩu',
+  'haveAccount': 'Bạn đã có tài khoản?',
+  'notAccount': 'Bạn chưa có tài khoản?',
+  'multipleLanguage' : 'Đa ngôn ngữ',
+  'cancel' : 'Hủy bỏ',
+  'notice' : 'Thông báo',
 };
