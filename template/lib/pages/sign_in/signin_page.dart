@@ -19,7 +19,7 @@ class SignInPage extends StatelessWidget {
        appBar: CustomAppBar(
          title: signIn.tr,
          showBackIcon: false,
-         automaticallyImplyLeading: false,
+         // automaticallyImplyLeading: false,
          actions: [
            InkWell(
              onTap: () => Get.toNamed(AppRoutes.LANGUAGE),

@@ -62,8 +62,7 @@ class SignInController extends GetxController{
 
   void onSignIn({context}) {
     if (emailValidate() && passValidate()) {
-      // Get.toNamed(AppRoutes.DASHBOARD);
-      showAlertDialog(context: context);
+      Get.toNamed(AppRoutes.DASHBOARD);
     }
   }
 }

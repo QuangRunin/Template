@@ -14,7 +14,7 @@ class SignUpPage extends StatelessWidget {
       backgroundColor: backgroundColor,
       appBar: CustomAppBar(
         title: signUp.tr,
-        showBackIcon: false,
+        showBackIcon: true,
       ),
       body: GestureDetector(
         onTap: () => WidgetsBinding.instance?.focusManager.primaryFocus?.unfocus(),
