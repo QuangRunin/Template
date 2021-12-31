@@ -63,7 +63,7 @@ class SignInPage extends StatelessWidget {
                    mainAxisAlignment: MainAxisAlignment.center,
                    children: [
                      Text(notAccount.tr, style: size12W500Default),
-                     const SizedBox(width: 11.0),
+                     const SizedBox(width: 10.0),
                      InkWell(
                        onTap: () => Get.toNamed(AppRoutes.SIGN_UP),
                        child: Text(signUp.tr, style: underline),

@@ -69,7 +69,7 @@ class _DashboardPageState extends State<DashboardPage> {
                 highlightColor: Colors.transparent
             ),
             child: Container(
-              height: MediaQuery.of(context).padding.bottom + 65.0,
+              height: MediaQuery.of(context).padding.bottom + 50.0,
               color: Colors.white,
               child: Obx(()=> BottomNavigationBar(
                 type: BottomNavigationBarType.fixed,

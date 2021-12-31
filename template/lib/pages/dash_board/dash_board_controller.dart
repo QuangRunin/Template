@@ -92,30 +92,27 @@ class DashBoardController extends GetxController with GetTickerProviderStateMixi
     update();
   }
   Widget customIcon({index, icon,showBadge,title}) {
-    return SizedBox(
-      height: 50,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          // showBadge ? Container(
-          //   width: 6.0,
-          //   height: 6.0,
-          //   decoration: const BoxDecoration(
-          //     borderRadius: BorderRadius.all(Radius.circular(3.0)),
-          //     color: Colors.red,
-          //   ),
-          // ) :  const SizedBox(height: 5.0),
-          // const SizedBox(height: 4),
-          Icon(
-            icon,
-            color: index != currentIndex.value ? Colors.black : Colors.red,
-            size: index != currentIndex.value ? 20 : 24,
-          ),
-          // Image.asset(icon,color: index != currentIndex.value ? Colors.black : Colors.red),
-          // Text(title),
-        ],
-      ),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        // showBadge ? Container(
+        //   width: 6.0,
+        //   height: 6.0,
+        //   decoration: const BoxDecoration(
+        //     borderRadius: BorderRadius.all(Radius.circular(3.0)),
+        //     color: Colors.red,
+        //   ),
+        // ) :  const SizedBox(height: 5.0),
+        // const SizedBox(height: 4),
+        Icon(
+          icon,
+          color: index != currentIndex.value ? Colors.black : Colors.red,
+          size: index != currentIndex.value ? 18 : 22,
+        ),
+        // Image.asset(icon,color: index != currentIndex.value ? Colors.black : Colors.red),
+        // Text(title),
+      ],
     );
   }
   Widget customTitle(index,title) {

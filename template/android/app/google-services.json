@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "165730809908",
+    "project_id": "ligatures-83eec",
+    "storage_bucket": "ligatures-83eec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:165730809908:android:1070ea7a7884b7a28af261",
+        "android_client_info": {
+          "package_name": "com.example.template"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "165730809908-k27iq3hbv67fv4cang4u0i2r22rj1mdq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEK1XFsePPvPrzPCAr2RMn4U9u7CWbmqg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "165730809908-k27iq3hbv67fv4cang4u0i2r22rj1mdq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
