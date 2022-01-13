@@ -8,6 +8,7 @@ import 'package:template/localization_service.dart';
 import 'package:template/model/m_country.dart';
 import 'package:template/model/m_left_menu.dart';
 import 'package:template/pages/home/home_page.dart';
+import 'package:template/pages/laboratory/laboratory_page.dart';
 
 class DashBoardController extends GetxController with GetTickerProviderStateMixin{
   var currentIndex = 0.obs;
@@ -17,7 +18,7 @@ class DashBoardController extends GetxController with GetTickerProviderStateMixi
   String? selectedLang;
   List<Widget>? dashBoardWidgets = <Widget>[
     const HomePage(),
-    const HomePage(),
+    const LaboratoryPage(),
     const HomePage(),
     const HomePage(),
   ];

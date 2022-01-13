@@ -1,6 +1,8 @@
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:template/pages/dash_board/dash_board_binding.dart';
 import 'package:template/pages/dash_board/dash_board_page.dart';
+import 'package:template/pages/laboratory/laboratory_binding.dart';
+import 'package:template/pages/laboratory/laboratory_page.dart';
 import 'package:template/pages/language/language_binding.dart';
 import 'package:template/pages/language/language_page.dart';
 import 'package:template/pages/sign_in/signin_binding.dart';
@@ -46,6 +48,13 @@ class AppPages {
       name: AppRoutes.DASHBOARD,
       page: () => const DashboardPage(),
       binding: DashBoardBinding(),
+      transition: Transition.topLevel,
+      transitionDuration: const  Duration(milliseconds: duration),
+    ),
+    GetPage(
+      name: AppRoutes.LABORATORY,
+      page: () => const LaboratoryPage(),
+      binding: LaboratoryBinding(),
       transition: Transition.topLevel,
       transitionDuration: const  Duration(milliseconds: duration),
     ),
