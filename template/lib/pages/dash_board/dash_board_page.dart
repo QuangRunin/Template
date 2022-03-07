@@ -69,7 +69,7 @@ class _DashboardPageState extends State<DashboardPage> {
                 highlightColor: Colors.transparent
             ),
             child: Container(
-              height: MediaQuery.of(context).padding.bottom + 50.0,
+              height: MediaQuery.of(context).padding.bottom + 55.0,
               color: Colors.white,
               child: Obx(()=> BottomNavigationBar(
                 type: BottomNavigationBarType.fixed,
@@ -83,10 +83,10 @@ class _DashboardPageState extends State<DashboardPage> {
                   controller.changeIndex(value);
                 },
                 items: [
-                  BottomNavigationBarItem(icon: controller.customIcon(index: 0,icon: Icons.home_outlined,showBadge: false, title: home.tr),title: const SizedBox()),
-                  BottomNavigationBarItem(icon: controller.customIcon(index: 1,icon: Icons.ad_units_rounded,showBadge: false,title: home.tr),title: const SizedBox()),
-                  BottomNavigationBarItem(icon: controller.customIcon(index: 2,icon: Icons.account_balance_rounded,showBadge: false, title:  home.tr),title: const SizedBox()),
-                  BottomNavigationBarItem(icon: controller.customIcon(index: 3,icon: Icons.add_alert,showBadge: true, title: home.tr),title: const SizedBox()),
+                  BottomNavigationBarItem(icon: controller.customIcon(index: 0,icon: Icons.home_outlined,showBadge: false, title: home.tr), label: ''),
+                  BottomNavigationBarItem(icon: controller.customIcon(index: 1,icon: Icons.ad_units_rounded,showBadge: false,title: home.tr), label: ''),
+                  BottomNavigationBarItem(icon: controller.customIcon(index: 2,icon: Icons.account_balance_rounded,showBadge: false, title:  home.tr), label: ''),
+                  BottomNavigationBarItem(icon: controller.customIcon(index: 3,icon: Icons.add_alert,showBadge: true, title: home.tr), label: ''),
                 ],
               )),
             ),
